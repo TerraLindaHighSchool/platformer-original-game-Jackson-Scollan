@@ -14,7 +14,7 @@ public abstract class Obstacle extends Actor
         // false otherwise
         protected boolean isOnGround()
         {
-                Actor gorund = getOneObjectAtOffset(0,getImage().getHeight() / 2, Platform.class);
+                Actor ground = getOneObjectAtOffset(0,getImage().getHeight() / 2, Platform.class);
                 
                 return ground != null;
         }
@@ -24,7 +24,7 @@ public abstract class Obstacle extends Actor
         protected void removeOutBounds(Obstacle obstacle)
      
         {
-                if(obstacle.getY?() > getWorld().getHeight() + obstacle.getImage().getWidth() / 2)
+                if(obstacle.getY() > getWorld().getHeight() + obstacle.getImage().getWidth() / 2)
                 
                 {
                     getWorld().removeObject(obstacle);
