@@ -22,6 +22,11 @@ public class Level1 extends World
         prepare();
     }
     
+    public void act()
+    {
+        spawn();
+    }
+    
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
@@ -54,9 +59,18 @@ public class Level1 extends World
         addObject(new Bomb(GRAVITY),300,765);
         addObject(new Bomb(GRAVITY),725,455);
         addObject(new Bomb(GRAVITY),25,305);
-
-
-        
-        
     }
+    
+     public void spawn()
+    {
+        if(Math.random() < 0.0025)
+        {
+            addObject(new Rock(GRAVITY), Greenfoot.getRandomNumber(1200), -30);
+        }
+        
+        if(Math.random() < 0.03)
+        {
+            addObject(new AcidRain(GRAVITY), Greenfoot.getRandomNumber(1200), -30);
+        }
+    }   
 }

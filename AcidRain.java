@@ -25,6 +25,6 @@ public class AcidRain extends Obstacle
     {
         yVelocity += GRAVITY;
         setLocation(getX(), getY() + (int) yVelocity);
-        removeOutOfBounds(this);
+        removeOutBounds(this);
     }
 }
