@@ -18,7 +18,7 @@ public class Bomb extends Obstacle
     
     public void act()
     {
-        fall();
+        if(!isOnGround()) fall();
     }
     
     protected void fall()

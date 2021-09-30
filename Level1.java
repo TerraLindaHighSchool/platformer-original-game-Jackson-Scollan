@@ -42,7 +42,8 @@ public class Level1 extends World
 
         addObject(new SmBrickWall(),1150,100);
         addObject(new SmBrickWall(),1050,130);
-        addObject(new Player(),41,753);
+        Player player = new Player(3, 5.6f, GRAVITY, 3, 3, Level2.class, MUSIC);
+        addObject(player, 45, 750); 
         addObject(new Floor(),600,800);
         addObject(new BrickWall(),650,500); 
         addObject(new BrickWall(),550,150);
