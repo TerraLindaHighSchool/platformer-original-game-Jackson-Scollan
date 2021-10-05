@@ -14,7 +14,7 @@ public class Player extends Actor
     private int speed;
     private int walkIndex;
     private int frame;
-    private float Velocity; 
+    private float yVelocity; 
     private boolean isWalking;
     private boolean isJumping;
     private boolean isFacingLeft;
@@ -88,13 +88,13 @@ public class Player extends Actor
        
         if(Greenfoot.isKeyDown("left"))
         {
-            if(isFacingLeft)
+            if(!isFacingLeft)
             {
                 mirrorImages();
             }
             isWalking = true;
             isFacingLeft = true;
-            move(speed);
+            move(-speed);
         }
              
          if(!(Greenfoot.isKeyDown("left") || Greenfoot.isKeyDown("right")))
@@ -103,8 +103,33 @@ public class Player extends Actor
         }
     }
     
-    private void jump() {}
-    private void fall() {}
+    private void jump() 
+    {
+       if(Greenfoot.isKeyDown("space") && isOnGround())
+       {
+           yVelocity = JUMP_FORCE;
+           isJumping = true;
+       }
+       
+       if(isJumping && yVelocity > 0)
+       {
+           setLocation(getX(), getY() - (int) yVelocity);
+           yVelocity -=GRAVITY;
+       }
+       else
+       {
+           isJumping = false;
+       }
+    }
+    
+    private void fall() 
+    {
+        if(!isJumping && !isOnGround())
+        {
+            setLocation(getX(), getY() - (int) yVelocity);
+            yVelocity -= GRAVITY; 
+        }
+    }
     
     private void animator() 
     {
@@ -133,6 +158,7 @@ public class Player extends Actor
     private void gameOver() {}
     private boolean isOnGround() 
     {
-        return false;
+         Actor ground = getOneObjectAtOffset(0, getImage().getHeight() /2, Platform.class);
+         return ground != null;
     }
 }
