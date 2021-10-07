@@ -20,7 +20,7 @@ public class Level1 extends World
         // Create a new world with 1200x800 cells with a cell size of 1x1 pixels.
         super(1200, 800, 1, false); 
         prepare();
-    
+ 
     }
     
     public void act()
@@ -40,9 +40,8 @@ public class Level1 extends World
         Door door = new Door();
         addObject(door,1150,50);
 
-
         addObject(new SmBrickWall(),1150,100);
-        addObject(new SmBrickWall(),1050,150);
+        addObject(new SmBrickWall(),1020,165);
         Player player = new Player(3, 5.6f, GRAVITY, 3, 3, Level2.class, MUSIC);
         addObject(player, 45, 750); 
         addObject(new Floor(),600,800);
@@ -59,18 +58,20 @@ public class Level1 extends World
         addObject(new Gem(),130, 305);
         addObject(new SmBrickWall(),860,350);
         addObject(new Bomb(GRAVITY),300,765);
-        addObject(new Bomb(GRAVITY),695,455);
+        addObject(new Bomb(GRAVITY),685,455);
         addObject(new Bomb(GRAVITY),25,305);
+        UpArrow upArrow = new UpArrow();
+        addObject(upArrow,755,388);
     }
     
      public void spawn()
     {
-        if(Math.random() < 0.0016)
+        if(Math.random() < 0.0013)
         {
             addObject(new Rock(GRAVITY), Greenfoot.getRandomNumber(1200), -30);
         }
         
-        if(Math.random() < 0.025)
+        if(Math.random() < 0.018)
         {
             addObject(new AcidRain(GRAVITY), Greenfoot.getRandomNumber(1200), -30);
         }

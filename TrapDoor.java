@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class TrapDoor extends Obstacle
+public class TrapDoor extends Actor
 {
      private float yVelocity;
     private final float GRAVITY;
