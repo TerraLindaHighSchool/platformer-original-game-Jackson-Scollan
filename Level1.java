@@ -42,7 +42,7 @@ public class Level1 extends World
 
 
         addObject(new SmBrickWall(),1150,100);
-        addObject(new SmBrickWall(),1050,130);
+        addObject(new SmBrickWall(),1050,150);
         Player player = new Player(3, 5.6f, GRAVITY, 3, 3, Level2.class, MUSIC);
         addObject(player, 45, 750); 
         addObject(new Floor(),600,800);
@@ -57,20 +57,20 @@ public class Level1 extends World
         addObject(new Gem(),1100, 355);
         addObject(new Gem(),1100, 605);
         addObject(new Gem(),130, 305);
-        addObject(new SmBrickWall(),850,350);
+        addObject(new SmBrickWall(),860,350);
         addObject(new Bomb(GRAVITY),300,765);
-        addObject(new Bomb(GRAVITY),725,455);
+        addObject(new Bomb(GRAVITY),695,455);
         addObject(new Bomb(GRAVITY),25,305);
     }
     
      public void spawn()
     {
-        if(Math.random() < 0.0022)
+        if(Math.random() < 0.0016)
         {
             addObject(new Rock(GRAVITY), Greenfoot.getRandomNumber(1200), -30);
         }
         
-        if(Math.random() < 0.03)
+        if(Math.random() < 0.025)
         {
             addObject(new AcidRain(GRAVITY), Greenfoot.getRandomNumber(1200), -30);
         }
