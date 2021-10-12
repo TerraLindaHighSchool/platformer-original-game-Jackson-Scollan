@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Player extends Actor
 {
-       private Health[] health;
+    private Health[] health;
     private Powerup[] powerup;
     private int healthCount;
     private int speed;
@@ -122,7 +122,9 @@ public class Player extends Actor
     private void jump() 
     {
        if(Greenfoot.isKeyDown("space") && isOnGround())
+       
        {
+           Greenfoot.playSound("jump.wav");
            yVelocity = JUMP_FORCE;
            isJumping = true;
        }
@@ -168,8 +170,8 @@ public class Player extends Actor
     {
         if(isTouching(Door.class))
         {
-        MUSIC.stop();    
-            
+        Greenfoot.playSound("door_open.wav");    
+        MUSIC.stop();     
         World world = null;
         try 
             {
@@ -186,6 +188,7 @@ public class Player extends Actor
         
         if(isTouching(Obstacle.class))
         {
+            Greenfoot.playSound("explosionSmall.wav");
             removeTouching(Obstacle.class);
             getWorld().removeObject(health[healthCount - 1]);
             healthCount--;
@@ -209,10 +212,11 @@ public class Player extends Actor
     }
     private void gameOver() 
     {
-        MUSIC.stop();
+        
         
         if(healthCount == 0)
         {
+            MUSIC.stop();
             Greenfoot.setWorld(new Level1());
         }
     }
