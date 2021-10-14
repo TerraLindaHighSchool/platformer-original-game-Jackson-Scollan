@@ -65,12 +65,11 @@ public class Player extends Actor
     
     public void addedToWorld(World world) 
     {
-       health[0] = new Health();
-       world.addObject(health[0], 30, 36);
-       health[1] = new Health();
-       world.addObject(health[1], 72, 36);
-       health[2] = new Health();
-       world.addObject(health[2], 114, 36);
+        for(int i = 0; i < healthCount; i++)
+        {
+            health[i] = new Health();
+            world.addObject(health[i], 30 + 42 * i, 36);
+        }
     }
     
     private void walk() 
@@ -200,6 +199,18 @@ public class Player extends Actor
              fall();
         }
         
+        if(isTouching(Gem.class))
+        {
+            Greenfoot.playSound("collectable.wav");
+            removeTouching(Gem.class);
+        }
+        
+        if(isTouching(Egg.class))
+        {
+            removeTouching(Egg.class);
+            getWorld().removeObject(health[healthCount +2]);
+            healthCount--;
+        }
 
     }
     

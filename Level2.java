@@ -12,7 +12,7 @@ public class Level2 extends World
     private final GreenfootSound MUSIC = new GreenfootSound("incompetech_tribal.mp3");
     private final int SPEED = 3;
     private final float JUMP_FORCE = 5.6f;
-    private final int MAX_HEALTH = 3;
+    private final int MAX_HEALTH = 12;
     private final int MAX_POWERUP = 3;
     private final Class NEXT_LEVEL = WinSplash.class;
     
@@ -45,31 +45,47 @@ public class Level2 extends World
         Door door = new Door();
         addObject(door,1150,50);
         addObject(new SmBrickWall(),1150,100);
-        addObject(new SmBrickWall(),1020,165);
-        
+        addObject(new TrapDoor(GRAVITY),1030,100);
+
+        addObject(new SmBrickWall(),850,250);
+
+        addObject(new BrickWall(),1030,400);
+        addObject(new Bomb(GRAVITY),1025,355);
+
+        addObject(new SmBrickWall(),1150,700);
+        addObject(new Gem(),1150, 665);
+        addObject(new TrapDoor(GRAVITY),1030,700);
+        addObject(new SmBrickWall(),910,700);
+
+        addObject(new SmBrickWall(),650,775);
+        addObject(new SmBrickWall(),620,500);
+
+        addObject(new SmBrickWall(),490,130);
+        addObject(new Gem(),460, 95);
+
+        addObject(new BrickWall(),240,625);
+        addObject(new Bomb(GRAVITY),220,580);
+
+        addObject(new SmBrickWall(),240,475);
+        addObject(new TrapDoor(GRAVITY),120,475);
+        addObject(new Gem(),110, 440);
+
+        addObject(new SmBrickWall(),60,325);
+        addObject(new TrapDoor(GRAVITY),180,325);
+        addObject(new SmBrickWall(),300,325);
+
         Player player = new Player(SPEED, JUMP_FORCE, GRAVITY, 
-                           MAX_HEALTH, MAX_POWERUP, NEXT_LEVEL, MUSIC);
-        
+                MAX_HEALTH, MAX_POWERUP, NEXT_LEVEL, MUSIC);
+
         addObject(player, 45, 750); 
-        
+
         addObject(new Floor(),600,800);
-        addObject(new BrickWall(),650,500); 
-        addObject(new BrickWall(),550,150);
-        addObject(new BrickWall(),100,350);
-        addObject(new TrapDoor(GRAVITY),300,650); 
-        addObject(new TrapDoor(GRAVITY),775,350); 
-        addObject(new TrapDoor(GRAVITY),700,350);
-        addObject(new SmBrickWall(),1100,650);
-        addObject( new SmBrickWall(),1100,400);
-        addObject(new Gem(),1100, 355);
-        addObject(new Gem(),1100, 605);
-        addObject(new Gem(),130, 305);
-        addObject(new SmBrickWall(),860,350);
-        addObject(new Bomb(GRAVITY),300,765);
-        addObject(new Bomb(GRAVITY),685,455);
-        addObject(new Bomb(GRAVITY),25,305);
-        UpArrow upArrow = new UpArrow();
-        addObject(upArrow,755,388);
+        addObject(new Bomb(GRAVITY),800,765);
+
+        
+        
+        Egg egg = new Egg();
+        addObject(egg,619,342);
     }
     
      public void spawn()
@@ -79,7 +95,7 @@ public class Level2 extends World
             addObject(new Rock(GRAVITY), Greenfoot.getRandomNumber(1200), -30);
         }
         
-        if(Math.random() < 0.018)
+        if(Math.random() < 0.024)
         {
             addObject(new AcidRain(GRAVITY), Greenfoot.getRandomNumber(1200), -30);
         }
