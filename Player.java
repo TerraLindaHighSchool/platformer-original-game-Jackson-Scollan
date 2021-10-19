@@ -208,8 +208,7 @@ public class Player extends Actor
         if(isTouching(Egg.class))
         {
             removeTouching(Egg.class);
-            getWorld().removeObject(health[healthCount +2]);
-            healthCount--;
+        
         }
 
     }
