@@ -193,6 +193,23 @@ public class Player extends Actor
             healthCount--;
         }
         
+        if(isTouching(FireSpirit.class))
+        {
+            removeTouching(FireSpirit.class);
+            getWorld().removeObject(health[healthCount - 1]);
+            healthCount--;
+        }
+        
+        if(isTouching(Port2.class))
+        {
+            setLocation(90,160);
+        }
+        
+        if(isTouching(Port1.class))
+        {
+            setLocation(1100,620);
+        }
+        
         if(isTouching(Platform.class))
         {
              yVelocity = -2;

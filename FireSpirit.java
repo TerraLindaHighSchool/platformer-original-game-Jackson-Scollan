@@ -14,6 +14,28 @@ public class FireSpirit extends Actor
      */
     public void act()
     {
-        // Add your action code here.
+        move(2);
+        turnAtEdge();
+        turnOnCollison();
     }
-}
+    
+    public void turnOnCollison()
+    {
+        if(isTouching(Dangerv2.class))
+        {
+            turn(180);
+        }
+    }
+    
+    private void turnAtEdge()
+    {
+        if(isAtEdge())
+        {
+        turn(180);
+        }
+    }
+    
+    }
+    
+    
+

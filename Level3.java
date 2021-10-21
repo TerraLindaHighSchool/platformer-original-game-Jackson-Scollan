@@ -12,7 +12,7 @@ public class Level3 extends World
     private final GreenfootSound MUSIC = new GreenfootSound("incompetech_tribal.mp3");
     private final int SPEED = 3;
     private final float JUMP_FORCE = 5.6f;
-    private final int MAX_HEALTH = 5;
+    private final int MAX_HEALTH = 6;
     private final int MAX_POWERUP = 3;
     private final Class NEXT_LEVEL = WinSplash.class;
     
@@ -44,7 +44,7 @@ public class Level3 extends World
 
         Door door = new Door();
         addObject(door,1150,65);
-        addObject(new SmBrickWall(),1150,115);
+        addObject(new SmMossWall(),1150,115);
 
         Player player = new Player(SPEED, JUMP_FORCE, GRAVITY, 
                 MAX_HEALTH, MAX_POWERUP, NEXT_LEVEL, MUSIC);
@@ -55,35 +55,41 @@ public class Level3 extends World
         addObject(new FireSpirit(),600,770);
         
 
-        addObject(new SmBrickWall(),550,720);
+        addObject(new SmMossWall(),550,720);
         
-        addObject(new TrapDoor(GRAVITY),330,620);
-        addObject(new TrapDoor(GRAVITY),500,435);
+        addObject(new TrapDoor2(),330,620);
+        addObject(new TrapDoor2(),500,435);
 
-        addObject(new SmBrickWall(),715,530);
-        addObject(new SmBrickWall(),85,540);
+        addObject(new SmMossWall(),715,530);
+        addObject(new SmMossWall(),85,540);
         addObject(new Bomb(GRAVITY),28,495);
         
-        addObject(new SmBrickWall(),250,345);
+        addObject(new SmMossWall(),250,345);
         addObject(new Gem(),250,310);
 
         
-        addObject(new BrickWall(),990,660);
+        addObject(new MossWall(),990,660);
         addObject(new FireSpirit(),990,620);
-        addObject(new Bomb(GRAVITY),845,620);
+        addObject(new Dangerv2(),750,620);
+        addObject(new Bomb(GRAVITY),845,615);
+        addObject(new Port1(),1150,620);
+
         
-        addObject(new SmBrickWall(),1150,320);
+        addObject(new SmMossWall(),1150,320);
         
-        addObject(new SmBrickWall(),800,340);
-        addObject(new TrapDoor(GRAVITY),800,150);
+        addObject(new SmMossWall(),800,340);
+        addObject(new TrapDoor2(),800,150);
         addObject(new Gem(),800,115);
         
 
 
-        addObject(new BrickWall(),240,200);
+        addObject(new MossWall(),240,200);
         addObject(new Gem(),200,165);
         addObject(new Egg(),400,160);
         addObject(new FireSpirit(),300,160);
+        addObject(new Dangerv2(),480,160);        
+        addObject(new Port2(),50,160);
+        
 
 
 
@@ -100,7 +106,7 @@ public class Level3 extends World
             addObject(new Rock(GRAVITY), Greenfoot.getRandomNumber(1200), -30);
         }
         
-        if(Math.random() < 0.030)
+        if(Math.random() < 0.024)
         {
             addObject(new AcidRain(GRAVITY), Greenfoot.getRandomNumber(1200), -30);
         }
