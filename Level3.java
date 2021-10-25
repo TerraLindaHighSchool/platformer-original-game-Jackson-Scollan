@@ -88,7 +88,7 @@ public class Level3 extends World
         addObject(new Egg(),400,160);
         addObject(new FireSpirit(),300,160);
         addObject(new Dangerv2(),480,160);        
-        addObject(new Port2(),50,160);
+        addObject(new ExitPort2(),50,160);
         
 
 

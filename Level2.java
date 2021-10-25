@@ -44,35 +44,35 @@ public class Level2 extends World
 
         Door door = new Door();
         addObject(door,1150,50);
-        addObject(new SmBrickWall(),1150,100);
-        addObject(new TrapDoor(GRAVITY),1030,100);
+        addObject(new SmSandstoneWall(),1150,100);
+        addObject(new TrapDoor3(),1030,100);
 
-        addObject(new SmBrickWall(),850,250);
+        addObject(new SmSandstoneWall(),850,250);
 
-        addObject(new BrickWall(),1030,400);
+        addObject(new SandstoneWall(),1030,400);
         addObject(new Bomb(GRAVITY),1025,355);
 
-        addObject(new SmBrickWall(),1150,700);
+        addObject(new SmSandstoneWall(),1150,700);
         addObject(new Gem(),1150, 665);
-        addObject(new TrapDoor(GRAVITY),1030,700);
-        addObject(new SmBrickWall(),910,700);
+        addObject(new TrapDoor3(),1030,700);
+        addObject(new SmSandstoneWall(),910,700);
 
-        addObject(new SmBrickWall(),650,775);
-        addObject(new SmBrickWall(),620,500);
+        addObject(new SmSandstoneWall(),650,775);
+        addObject(new SmSandstoneWall(),620,500);
 
-        addObject(new SmBrickWall(),490,130);
+        addObject(new SmSandstoneWall(),490,130);
         addObject(new Gem(),460, 95);
 
-        addObject(new BrickWall(),240,625);
+        addObject(new SandstoneWall(),240,625);
         addObject(new Bomb(GRAVITY),220,580);
 
-        addObject(new SmBrickWall(),240,475);
-        addObject(new TrapDoor(GRAVITY),120,475);
+        addObject(new SmSandstoneWall(),240,475);
+        addObject(new TrapDoor3(),120,475);
         addObject(new Gem(),110, 440);
 
-        addObject(new SmBrickWall(),60,325);
-        addObject(new TrapDoor(GRAVITY),180,325);
-        addObject(new SmBrickWall(),300,325);
+        addObject(new SmSandstoneWall(),60,325);
+        addObject(new TrapDoor3(),180,325);
+        addObject(new SmSandstoneWall(),300,325);
 
         Player player = new Player(SPEED, JUMP_FORCE, GRAVITY, 
                 MAX_HEALTH, MAX_POWERUP, NEXT_LEVEL, MUSIC);

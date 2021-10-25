@@ -200,14 +200,14 @@ public class Player extends Actor
             healthCount--;
         }
         
-        if(isTouching(Port2.class))
-        {
-            setLocation(90,160);
-        }
-        
         if(isTouching(Port1.class))
         {
-            setLocation(1100,620);
+            setLocation(130,160);
+        }
+        
+        if(isTouching(ExitPort2.class))
+        {
+            setLocation(1070,620);
         }
         
         if(isTouching(Platform.class))
@@ -237,6 +237,7 @@ public class Player extends Actor
             WALK_ANIMATION[i].mirrorHorizontally();
         }
     }
+    
     private void gameOver() 
     {
         

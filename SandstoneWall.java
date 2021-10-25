@@ -1,15 +1,15 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Port1 here.
+ * Write a description of class SandstoneWall here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Port1 extends Actor
+public class SandstoneWall extends Platform
 {
     /**
-     * Act - do whatever the Port1 wants to do. This method is called whenever
+     * Act - do whatever the SandstoneWall wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
