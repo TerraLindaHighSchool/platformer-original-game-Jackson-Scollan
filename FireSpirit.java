@@ -14,17 +14,23 @@ public class FireSpirit extends Actor
      */
     public void act()
     {
-        move(-2);
         turnAtEdge();
-        turnOnCollison();
-        mirrorImages();
+        turnBack();
+        
     }
     
-    public void turnOnCollison()
+    public void turnBack()
     {
-        if(isTouching(Dangerv2.class))
+        if(getX()==750)
         {
-              mirrorImages();
+            mirrorImages();
+            move(2);
+        }
+        
+        if(getX()==480)
+        {
+            mirrorImages();
+            move(2);
         }
     }
     
@@ -33,15 +39,17 @@ public class FireSpirit extends Actor
         if(isAtEdge())
         {
             mirrorImages();
+            move(2);
         }
+   
     }
     
     private void mirrorImages() 
-    {
         {
-            mirrorHorizontally();
+            {   
+            getImage().mirrorHorizontally();
+            }
         }
-    }
     
 }
     

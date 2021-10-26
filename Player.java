@@ -228,6 +228,7 @@ public class Player extends Actor
         
         }
 
+        
     }
     
     private void mirrorImages() 
@@ -240,12 +241,12 @@ public class Player extends Actor
     
     private void gameOver() 
     {
-        
-        
         if(healthCount == 0)
         {
             MUSIC.stop();
-            Greenfoot.setWorld(new Level1());
+            Greenfoot.setWorld(new GameOverScreen());
+            Greenfoot.playSound("gameover.mp3");
+            Greenfoot.stop();
         }
     }
     

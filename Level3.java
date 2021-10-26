@@ -70,7 +70,6 @@ public class Level3 extends World
         
         addObject(new MossWall(),990,660);
         addObject(new FireSpirit(),990,620);
-        addObject(new Dangerv2(),750,620);
         addObject(new Bomb(GRAVITY),845,615);
         addObject(new Port1(),1150,620);
 
@@ -86,8 +85,7 @@ public class Level3 extends World
         addObject(new MossWall(),240,200);
         addObject(new Gem(),200,165);
         addObject(new Egg(),400,160);
-        addObject(new FireSpirit(),300,160);
-        addObject(new Dangerv2(),480,160);        
+        addObject(new FireSpirit(),300,160);       
         addObject(new ExitPort2(),50,160);
         
 
