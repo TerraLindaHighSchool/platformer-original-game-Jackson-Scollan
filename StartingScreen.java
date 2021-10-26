@@ -30,7 +30,7 @@ public class StartingScreen extends World
     {
         if (Greenfoot.isKeyDown("enter"))
         {
-            greenFoot.setWorld(Level1);
+            Greenfoot.setWorld(new Level1());
         }
     }
 }
