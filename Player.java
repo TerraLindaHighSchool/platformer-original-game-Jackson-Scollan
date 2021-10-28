@@ -195,18 +195,37 @@ public class Player extends Actor
         
         if(isTouching(FireSpirit.class))
         {
+            Greenfoot.playSound("boo-and-laugh.mp3");    
             removeTouching(FireSpirit.class);
+            getWorld().removeObject(health[healthCount - 1]);
+            healthCount--;
+        }
+        
+        if(isTouching(FireSpirit2.class))
+        {
+            Greenfoot.playSound("boo-and-laugh.mp3");    
+            removeTouching(FireSpirit2.class);
+            getWorld().removeObject(health[healthCount - 1]);
+            healthCount--;
+        }
+        
+        if(isTouching(FireSpirit3.class))
+        {
+            Greenfoot.playSound("boo-and-laugh.mp3");    
+            removeTouching(FireSpirit3.class);
             getWorld().removeObject(health[healthCount - 1]);
             healthCount--;
         }
         
         if(isTouching(Port1.class))
         {
+            Greenfoot.playSound("warp.mp3");
             setLocation(130,160);
         }
         
         if(isTouching(ExitPort2.class))
         {
+            Greenfoot.playSound("warp.mp3");
             setLocation(1070,620);
         }
         
@@ -224,7 +243,10 @@ public class Player extends Actor
         
         if(isTouching(Egg.class))
         {
+            Greenfoot.playSound("egg-squash.mp3");
             removeTouching(Egg.class);
+            speed *= 2;
+            
         
         }
 

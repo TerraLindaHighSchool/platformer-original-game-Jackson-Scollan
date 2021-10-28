@@ -12,7 +12,7 @@ public class Level1 extends World
     private final GreenfootSound MUSIC = new GreenfootSound("zapsplat_024.mp3");
     private final int SPEED = 3;
     private final float JUMP_FORCE = 5.6f;
-    private final int MAX_HEALTH = 6;
+    private final int MAX_HEALTH = 5;
     private final int MAX_POWERUP = 3;
     private final Class NEXT_LEVEL = Level2.class;
     

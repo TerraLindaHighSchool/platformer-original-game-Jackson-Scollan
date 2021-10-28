@@ -1,12 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class FireSpirit here.
+ * Write a description of class FireSpirit2 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class FireSpirit extends Actor
+public class FireSpirit2 extends Actor
 {
     private int speed = -2;
     
@@ -24,8 +24,7 @@ public class FireSpirit extends Actor
     
     public void turnBack()
     {
-        
-        if(getX()==480)
+        if(getX()==750)
         {
             mirrorImages();
             speed *= -1;
@@ -38,7 +37,7 @@ public class FireSpirit extends Actor
         if(isAtEdge())
         {
             mirrorImages();
-            speed *=-1;
+            speed *= -1;
             move(speed);
         }
    
@@ -50,9 +49,4 @@ public class FireSpirit extends Actor
             getImage().mirrorHorizontally();
             }
         }
-    
 }
-    
-    
-    
-

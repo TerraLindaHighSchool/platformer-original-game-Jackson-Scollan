@@ -49,8 +49,9 @@ public class Level2 extends World
 
         addObject(new SmSandstoneWall(),850,250);
 
-        addObject(new SandstoneWall(),1030,400);
+        addObject(new SandstoneWall(),1000,400);
         addObject(new Bomb(GRAVITY),1025,355);
+        addObject(new FireSpirit2(), 990, 360);
 
         addObject(new SmSandstoneWall(),1150,700);
         addObject(new Gem(),1150, 665);
